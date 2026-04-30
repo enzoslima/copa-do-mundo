@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Copa do Mundo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz da Copa do Mundo</h1>
+        <div id="level-selection">
+            <p>Escolha o nível de dificuldade:</p>
+            <button onclick="startGame('easy')">Fácil (10 Perguntas)</button>
+            <button onclick="startGame('medium')">Médio (20 Perguntas)</button>
+            <button onclick="startGame('hard')">Difícil (30 Perguntas)</button>
+        </div>
+
+        <div id="quiz-game" style="display: none;">
+            <h2 id="question-number"></h2>
+            <p id="question-text"></p>
+            <div id="options-container">
+                <!-- As opções serão inseridas aqui pelo JavaScript -->
+            </div>
+            <button id="next-button" onclick="nextQuestion()" style="display: none;">Próxima Pergunta</button>
+            <p id="feedback"></p>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h2>Fim do Quiz!</h2>
+            <p>Você acertou <span id="score"></span> de <span id="total-questions"></span> perguntas.</p>
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
